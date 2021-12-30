@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">BeamApp</string>
+    <string name="login">Login</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="don_t_have_any_account_sign_up">Don’t have any account? Sign up</string>
+    <string name="v_1_0_0">v.1.0.0</string>
 </resources>
