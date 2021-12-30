@@ -4,7 +4,7 @@
     <style name="Theme.App" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/first_color</item>
-        <item name="colorPrimaryVariant">@color/third_color</item>
+        <item name="colorPrimaryVariant">@color/back_ground_login</item>
         <item name="colorOnPrimary">@color/second_color</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
