@@ -38,7 +38,7 @@ class LoginView : AppCompatActivity() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         actionBar?.hide()
 
-        loginViewModel.navigation.observe(this, {
+        loginViewModel.navigation.observe(this) {
             when (it) {
                 NAVIGATION.GO_MAIN_VIEW -> {
                     Toast.makeText(this, "MAIN VIEW", Toast.LENGTH_SHORT).show()
@@ -47,18 +47,29 @@ class LoginView : AppCompatActivity() {
                     Toast.makeText(this, "Go Register", Toast.LENGTH_SHORT).show()
                 }
             }
-        })
+        }
 
-        loginViewModel.error.observe(this, {
-            when (it) {
-                ERROR.EMPTY_FIELDS -> {
-                    Toast.makeText(this, "Empty Files", Toast.LENGTH_SHORT).show()
-                }
-                ERROR.WRONG_CREDENTIALS -> {
-                    Toast.makeText(this, "Wrong credentials", Toast.LENGTH_SHORT).show()
+        loginViewModel.error.observe(this) {
+            if (it != null) {
+                when (it) {
+                    ERROR.EMPTY_FORM -> {
+                        Toast.makeText(this, "Empty form", Toast.LENGTH_SHORT).show()
+                    }
+                    ERROR.ERROR_EMAIL -> {
+                        Toast.makeText(this, "Email format is incorrect", Toast.LENGTH_SHORT).show()
+                    }
+                    ERROR.EMPTY_PASSWORD -> {
+                        Toast.makeText(this, "Password empty", Toast.LENGTH_SHORT).show()
+                    }
+                    ERROR.EMPTY_EMAIL -> {
+                        Toast.makeText(this, "Password empty", Toast.LENGTH_SHORT).show()
+                    }
+                    ERROR.WRONG_CREDENTIALS -> {
+                        Toast.makeText(this, "Wrong credentials", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
-        })
+        }
 
 
     }

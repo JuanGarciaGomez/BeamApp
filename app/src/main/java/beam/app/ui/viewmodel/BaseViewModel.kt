@@ -15,10 +15,11 @@ open class BaseViewModel : ViewModel() {
 }
 
 enum class ERROR{
-    EMPTY_FIELDS,
+    EMPTY_FORM,
     WRONG_CREDENTIALS,
-    ERROR_ADD_EXPENSES,
-    ERROR_PASSWORD
+    EMPTY_PASSWORD,
+    ERROR_EMAIL,
+    EMPTY_EMAIL
 
 }
 
