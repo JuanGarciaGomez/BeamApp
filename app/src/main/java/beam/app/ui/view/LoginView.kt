@@ -13,6 +13,9 @@ import beam.app.ui.viewmodel.NAVIGATION
 
 class LoginView : AppCompatActivity() {
 
+    //Listo cambio de prueba
+    
+
 
     private lateinit var binding: ActivityLoginBinding
 
